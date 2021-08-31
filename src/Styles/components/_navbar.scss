@@ -1,0 +1,72 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.navbar {
+  background: $dark-grey;
+  box-shadow: $light-shadow;
+  width: 100%;
+  .nav-center {
+    .nav-header {
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  }
+}
+
+@include tablet {
+  .navbar {
+    .nav-center {
+      max-width: 1200px;
+      @include center-auto;
+      @include flex-space-bet;
+      justify-content: space-between;
+      padding: 1rem;
+      .logo {
+        height: 40px;
+      }
+
+      .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links-container {
+        height: auto;
+      }
+      .links {
+        display: flex;
+        li {
+          padding: 0;
+          margin: 0 0.5rem;
+          position: relative;
+          border-bottom: 2px solid transparent;
+          border-top: 2px solid transparent;
+          transition: .3s ease-in-out;
+          &:hover{
+            border-bottom: 2px solid $primary-3;
+            border-top: 2px solid $primary-3;
+          }
+          a{
+              font-size: 1.2rem;
+              color: $white;
+              transition: .3s ease-in-out;
+          }
+        }
+      }
+      .social-icons {
+        display: flex;
+        a {
+          margin: 0 0.5rem;
+          color: $primary-4;
+          transition: $transition;
+          &:hover {
+            color: $primary-7;
+          }
+        }
+      }
+    }
+  }
+}

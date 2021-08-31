@@ -1,0 +1,47 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+footer {
+    // overflow: hidden;
+    // position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $dark-grey;
+    color: $white;
+    .socials{
+        margin-top: 5px;
+        @include flex-center;
+        h3{
+            padding-bottom: 2px;
+            // border-bottom: 2px solid $primary-3;
+            .box{
+                @include center-auto;
+                height: 2px;
+                width: 0%;
+                background: $primary-3;
+                transition: .4s ease-in-out;
+                border-radius: 0;
+            }
+            &:hover{
+                cursor: default;
+                .box{
+                    width: 100%;
+                    border-radius: $radius;
+                }
+            }
+        }
+    }
+    ul{
+       @include flex-center; 
+       a{
+        font-size: 2rem;
+        padding: 0 1rem 0 1rem;
+        color: $white;
+        transition: .2s ease-in-out;
+        &:hover{
+            color: $primary-4;
+        }
+       }
+    }
+}

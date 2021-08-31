@@ -1,0 +1,60 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+html{
+    background-image: url("https://picsum.photos/4000");
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    @include flex-center;
+    padding: 0 0 50px 0;
+  .cards {
+    @include flex-center;
+    margin: 0 20px 0 20px;
+    flex-direction: column;
+    .img-container {
+      position: relative;
+      margin: 50px 0 50px 0;
+      height: 500px;
+      width: 400px;
+      background-image: url("https://picsum.photos/3000");
+      background-size: cover;
+      background-position: center;
+      transition: 0.2s ease-in-out;
+      box-shadow: none;
+      h1 {
+        @include flex-center;
+        font-size: 8rem;
+        margin-top: 200px;
+        color: $white;
+        transition: .2s ease-in;
+      }
+      &:hover {
+        transform: scale(103%);
+        box-shadow: $dark-shadow;
+        cursor: pointer;
+        h1{
+            color: $primary-3;
+        }
+      }
+    }
+    h2 {
+      width: fit-content;
+      color: $white;
+      border: solid 3px $white;
+      line-height: 1.5;
+      padding: 0 5px 0 5px;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary-3;
+        cursor: pointer;
+        background: $white;
+        border: solid 3px $white;
+      }
+    }
+  }
+}
