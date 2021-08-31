@@ -1,0 +1,30 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.gallery {
+  padding: 40px 0 40px 0;
+  .galTitle{
+      margin-left: 1rem;
+      padding-bottom: 1rem;
+      width: max-content;
+    border-bottom: 3px solid $primary-4;
+}
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    @include flex-center;
+    .gImg {
+      height: 300px;
+      width: 300px;
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s ease-out;
+        &:hover{
+            transform: scale(105%);
+            box-shadow: $dark-shadow;
+            cursor: pointer;
+        }
+    }
+  }
+}

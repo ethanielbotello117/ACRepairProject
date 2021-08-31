@@ -530,4 +530,33 @@ footer ul a:hover {
   cursor: pointer;
   background: #d12415;
   border: solid 3px #d12415;
+}
+
+.gallery {
+  padding: 40px 0 40px 0;
+}
+.gallery .galTitle {
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  width: max-content;
+  border-bottom: 3px solid #ce473b;
+}
+.gallery .photos {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .photos .gImg {
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s ease-out;
+}
+.gallery .photos .gImg:hover {
+  transform: scale(105%);
+  box-shadow: 0 5px 15px black;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

@@ -42,31 +42,76 @@ export const links = [
 
 export const boxLinks = [
     {
-        id: 2,
+        id: 1,
         url: '/about',
         text: 'ABOUT',
         page: <About />,
         icon: <FaInfoCircle />
     },
     {
-        id: 3,
+        id: 2,
         url: '/gallery',
         text: 'GALLERY',
         page: <Gallery />,
         icon: <FaImages />
     },
     {
-        id: 4,
+        id: 3,
         url: '/contact',
         text: 'CONTACT',
         page: <Contact />,
         icon: <FaPhone />
+    }
+];
+
+export const pictures = [
+    {
+        id: 1,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 2,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 3,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 4,
+        img: "url(https://picsum.photos/4000)"
     },
     {
         id: 5,
-        url: '*',
-        text: 'Error',
-        page: <Error />,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 6,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 7,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 8,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 9,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 10,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 11,
+        img: "url(https://picsum.photos/4000)"
+    },
+    {
+        id: 12,
+        img: "url(https://picsum.photos/4000)"
     },
 ];
 
