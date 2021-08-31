@@ -2,15 +2,20 @@
 @use '../util/variables' as *;
 @use '../util/mixins' as *;
 
-html{
-    background-image: url("https://picsum.photos/4000");
-    background-size: cover;
+.bg {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://picsum.photos/4000");
+  background-size: cover;
+  z-index: -1;
 }
 
 .main {
-    display: flex;
-    @include flex-center;
-    padding: 0 0 50px 0;
+  display: flex;
+  @include flex-center;
+  padding: 0 0 50px 0;
   .cards {
     @include flex-center;
     margin: 0 20px 0 20px;
@@ -30,30 +35,29 @@ html{
         font-size: 8rem;
         margin-top: 200px;
         color: $white;
-        transition: .2s ease-in;
+        transition: 0.2s ease-in;
       }
       &:hover {
         transform: scale(103%);
         box-shadow: $dark-shadow;
         cursor: pointer;
-        h1{
-            color: $primary-3;
+        h1 {
+          color: $primary-3;
         }
       }
     }
     h2 {
       width: fit-content;
       color: $white;
-      border: solid 3px $white;
+      border: solid 3px $primary-3;
       line-height: 1.5;
       padding: 0 5px 0 5px;
       transition: 0.3s ease-in-out;
-
       &:hover {
-        color: $primary-3;
+        // mix-blend-mode: multiply;
         cursor: pointer;
-        background: $white;
-        border: solid 3px $white;
+        background: $primary-0;
+        border: solid 3px $primary-0;
       }
     }
   }

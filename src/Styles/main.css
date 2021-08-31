@@ -199,7 +199,7 @@ a {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #d6665c;
+  color: #ce473b;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -466,9 +466,14 @@ footer ul a:hover {
   color: #ce473b;
 }
 
-html {
+.bg {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
   background-image: url("https://picsum.photos/4000");
   background-size: cover;
+  z-index: -1;
 }
 
 .main {
@@ -516,14 +521,13 @@ html {
 .main .cards h2 {
   width: fit-content;
   color: #fff;
-  border: solid 3px #fff;
+  border: solid 3px #b8392e;
   line-height: 1.5;
   padding: 0 5px 0 5px;
   transition: 0.3s ease-in-out;
 }
 .main .cards h2:hover {
-  color: #b8392e;
   cursor: pointer;
-  background: #fff;
-  border: solid 3px #fff;
+  background: #d12415;
+  border: solid 3px #d12415;
 }/*# sourceMappingURL=main.css.map */
