@@ -356,6 +356,57 @@ h4 {
   background: #3b3b3b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding-bottom: 10px;
+}
+.navbar .nav-toggle {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0%;
+  overflow: hidden;
+}
+.navbar .nav-toggle .bar {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #b8392e;
+  transform: none;
+  transition: 0.3s ease-in-out;
+}
+.navbar .nav-toggle .bar1 {
+  top: 0;
+  background: #ce473b;
+}
+.navbar .nav-toggle .bar2 {
+  background: #ce473b;
+}
+.navbar .nav-toggle .bar3 {
+  bottom: 0;
+  background: #ce473b;
+}
+.navbar .nav-toggle.show {
+  border-radius: 100%;
+}
+.navbar .nav-toggle.show .bar1 {
+  top: 40%;
+  background: #ce473b;
+  transform: rotate(45deg);
+}
+.navbar .nav-toggle.show .bar2 {
+  background: #ce473b;
+  transform: rotate(45deg);
+}
+.navbar .nav-toggle.show .bar3 {
+  bottom: 40%;
+  background: #ce473b;
+  transform: rotate(-45deg);
 }
 .navbar .nav-center .nav-header {
   display: flex;
@@ -364,8 +415,31 @@ h4 {
   justify-content: space-between;
   padding: 1rem;
 }
+.navbar .nav-center .links-container {
+  transition: all 0.5s linear;
+  height: 0;
+  overflow: hidden;
+}
+.navbar .nav-center .links-container.show {
+  height: 20px;
+}
+.navbar .nav-center .links {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar .nav-center .links li a {
+  color: #fff;
+}
 
 @media only screen and (min-width: 768px) {
+  .navbar {
+    padding-bottom: 0;
+  }
   .navbar .nav-center {
     max-width: 1200px;
     margin-left: auto;
@@ -386,6 +460,9 @@ h4 {
     display: none;
   }
   .navbar .nav-center .links-container {
+    height: min-content;
+  }
+  .navbar .nav-center .links-container.show {
     height: auto;
   }
   .navbar .nav-center .links {
@@ -466,72 +543,123 @@ footer ul a:hover {
   color: #ce473b;
 }
 
-.bg {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("https://picsum.photos/4000");
-  background-size: cover;
-  z-index: -1;
+html {
+  overflow-x: hidden;
 }
 
 .main {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 50px 0;
+  flex-direction: column;
 }
 .main .cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px 0 20px;
-  flex-direction: column;
+  height: 33%;
 }
 .main .cards .img-container {
   position: relative;
-  margin: 50px 0 50px 0;
-  height: 500px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   background-image: url("https://picsum.photos/3000");
   background-size: cover;
   background-position: center;
   transition: 0.2s ease-in-out;
   box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .main .cards .img-container h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8rem;
-  margin-top: 200px;
   color: #fff;
+  padding: 2.5%;
   transition: 0.2s ease-in;
-}
-.main .cards .img-container:hover {
-  transform: scale(103%);
-  box-shadow: 0 5px 15px black;
-  cursor: pointer;
-}
-.main .cards .img-container:hover h1 {
-  color: #b8392e;
+  background-color: #ce473b;
+  border-radius: 50%;
 }
 .main .cards h2 {
-  width: fit-content;
-  color: #fff;
-  border: solid 3px #b8392e;
-  line-height: 1.5;
-  padding: 0 5px 0 5px;
-  transition: 0.3s ease-in-out;
-}
-.main .cards h2:hover {
-  cursor: pointer;
-  background: #d12415;
-  border: solid 3px #d12415;
+  display: none;
 }
 
+@media only screen and (min-width: 768px) {
+  .bg {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://picsum.photos/4000");
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .main {
+    height: auto;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 50px 0;
+    flex-direction: row;
+  }
+  .main .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px 0 20px;
+    flex-direction: column;
+  }
+  .main .cards .img-container {
+    position: relative;
+    margin: 50px 0 50px 0;
+    background-image: url("https://picsum.photos/3000");
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s ease-in-out;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main .cards .img-container h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    color: #fff;
+    transition: 0.2s ease-in;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .main .cards .img-container:hover {
+    transform: scale(103%);
+    box-shadow: 0 5px 15px black;
+    cursor: pointer;
+  }
+  .main .cards .img-container:hover h1 {
+    color: #b8392e;
+  }
+  .main .cards h2 {
+    display: block;
+    width: fit-content;
+    color: #fff;
+    line-height: 1.5;
+    padding: 0 5px 0 5px;
+    transition: 0.3s ease-in-out;
+  }
+  .main .cards h2:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.356);
+    color: #d12415;
+    box-shadow: 0 5px 15px black;
+  }
+}
 .gallery {
   padding: 40px 0 40px 0;
 }
@@ -559,4 +687,5 @@ footer ul a:hover {
   transform: scale(105%);
   box-shadow: 0 5px 15px black;
   cursor: pointer;
+  border-radius: 0.25rem;
 }/*# sourceMappingURL=main.css.map */

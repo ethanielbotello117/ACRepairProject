@@ -29,8 +29,11 @@ const Navbar = () => {
         <div className="nav-header">
           {/* <img src={logo} alt="Logo" className="logo" /> */}
           <div className="logo">Logo</div>
-          <button className="nav-toggle" onClick={toggleLinks}>
-            <FaBars />
+          <button className={`nav-toggle ${showLinks && 'show'}`} onClick={toggleLinks}>
+            {/* <FaBars /> */}
+            <div className="bar bar1"></div>
+            <div className="bar bar2"></div>
+            <div className="bar bar3"></div>
           </button>
         </div>
         <div className={`links-container ${showLinks && 'show'}`}>
