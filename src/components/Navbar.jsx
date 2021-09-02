@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           {/* <img src={logo} alt="Logo" className="logo" /> */}
-          <div className="logo">Logo</div>
+          <div className="logo"><Link to="/">Logo</Link></div>
           <button className={`nav-toggle ${showLinks && 'show'}`} onClick={toggleLinks}>
             {/* <FaBars /> */}
             <div className="bar bar1"></div>

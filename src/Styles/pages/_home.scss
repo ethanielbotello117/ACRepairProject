@@ -15,7 +15,7 @@ html {
   flex-direction: column;
   .cards {
     @include flex-center;
-    height: 33%;
+    height: 33.3%;
     .img-container {
       position: relative;
       height: 100%;
@@ -53,7 +53,7 @@ html {
   }
 
   .main {
-    height: auto;
+    height: 100vh;
     display: flex;
     @include flex-center;
     padding: 0 0 50px 0;
@@ -62,11 +62,14 @@ html {
       @include flex-center;
       margin: 0 20px 0 20px;
       flex-direction: column;
+      position: relative;
+      height: 100vh;
+      width: 55vh;
       .img-container {
         position: relative;
         margin: 50px 0 50px 0;
-        // height: 500px;
-        // width: 400px;
+        height: 100%;
+        width: 100%;
         background-image: url("https://picsum.photos/3000");
         background-size: cover;
         background-position: center;

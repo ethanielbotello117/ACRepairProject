@@ -1,0 +1,25 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.error{
+    @include flex-center;
+    height: 100vh;
+    flex-direction: column;
+    h1{
+        color: black;
+        text-align: center;
+    }
+    .errSymbol {
+        padding: 15px;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background: $primary-4;
+        color: $white;
+        transition: 0.3s ease-out;
+        &:hover{
+            transform: scale(105%);
+        }
+    }
+}

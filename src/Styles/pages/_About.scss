@@ -1,0 +1,30 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.about {
+  .title {
+    color: $primary-0;
+    border-bottom: solid 3px $primary-0;
+    width: max-content;
+    margin: 20px;
+  }
+  height: 100vh;
+  .aboutBox {
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    .description {
+      h2 {
+        margin: 20px;
+        color: black;
+      }
+      p {
+        margin: 20px;
+      }
+    }
+    img {
+      margin: 10px;
+    }
+  }
+}
