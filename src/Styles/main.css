@@ -498,7 +498,7 @@ h4 {
   }
 }
 footer {
-  bottom: 0;
+  display: block;
   width: 100%;
   background: #3b3b3b;
   color: #fff;
@@ -700,13 +700,12 @@ html {
 }
 .contact h1 {
   border-bottom: solid 3px #ce473b;
-  width: max-content;
+  width: fit-content;
   justify-self: center;
 }
 .contact h1,
 .contact h2 {
-  margin: 30px 0 30px 1.5rem;
-  text-align: center;
+  margin: 10px;
 }
 .contact h2 {
   color: black;
@@ -771,26 +770,53 @@ html {
 }
 
 .about {
-  height: 100vh;
+  margin: 20px;
 }
 .about .title {
   color: #d12415;
   border-bottom: solid 3px #d12415;
-  width: max-content;
-  margin: 20px;
+  width: fit-content;
 }
-.about .aboutBox {
-  height: 33%;
-  display: flex;
-  flex-direction: row;
-}
-.about .aboutBox .description h2 {
-  margin: 20px;
-  color: black;
-}
-.about .aboutBox .description p {
-  margin: 20px;
-}
-.about .aboutBox img {
-  margin: 10px;
+
+@media only screen and (min-width: 768px) {
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://picsum.photos/5000");
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .about {
+    display: block;
+    height: 100%;
+  }
+  .about .title {
+    color: #d12415;
+    border-bottom: solid 3px #d12415;
+    width: fit-content;
+    margin: 20px;
+  }
+  .about .aboutBox {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+  .about .aboutBox .description h2 {
+    margin: 20px;
+    color: black;
+  }
+  .about .aboutBox .description p {
+    margin: 20px;
+    box-shadow: 0 5px 15px black;
+    padding: 20px;
+    color: #fff;
+  }
+  .about .aboutBox img {
+    margin: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

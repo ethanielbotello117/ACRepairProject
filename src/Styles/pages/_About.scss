@@ -6,25 +6,52 @@
   .title {
     color: $primary-0;
     border-bottom: solid 3px $primary-0;
-    width: max-content;
-    margin: 20px;
+    width: fit-content;
   }
-  height: 100vh;
-  .aboutBox {
-    height: 33%;
-    display: flex;
-    flex-direction: row;
-    .description {
-      h2 {
-        margin: 20px;
-        color: black;
-      }
-      p {
-        margin: 20px;
-      }
+  margin: 20px;
+}
+
+@include tablet {
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://picsum.photos/5000");
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .about {
+    display: block;
+    height: 100%;
+    .title {
+      color: $primary-0;
+      border-bottom: solid 3px $primary-0;
+      width: fit-content;
+      margin: 20px;
     }
-    img {
-      margin: 10px;
+    .aboutBox {
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+      .description {
+        h2 {
+          margin: 20px;
+          color: black;
+        }
+        p {
+          margin: 20px;
+          box-shadow: $dark-shadow;
+          padding: 20px;
+          color: $white;
+        }
+      }
+      img {
+        margin: 10px;
+      }
     }
   }
 }
